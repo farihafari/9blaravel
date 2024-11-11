@@ -18,4 +18,18 @@ class CategoryController extends Controller
     return back()->with("categories","categories submitted");
 
     }
+    // view
+    function AllCategories(){
+        $allCat = Category::all();
+        // dd($allCat);
+        return view("panel.view",compact("allCat"));
+    }
+
+    function updateCategories($keyId){
+     
+        $object = Category::find($keyId);
+        // dd($object->name);
+        return view("panel.update",compact("object"));
+    }
+
 }

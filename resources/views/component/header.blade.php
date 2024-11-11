@@ -64,8 +64,8 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Categories</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="categories" class="dropdown-item">Add</a>
-                            <a href="typography.html" class="dropdown-item">Typography</a>
-                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                            <a href="detail" class="dropdown-item">view</a>
+                            <a href="update" class="dropdown-item">Update</a>
                         </div>
                     </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>

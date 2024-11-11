@@ -13,3 +13,5 @@ Route::get('categories', function () {
     return view('panel.category');
 });
 Route::post("categories",[CategoryController::class,"AddCategory"]);
+Route::get("detail",[CategoryController::class,"AllCategories"]);
+Route::get("update.{id}",[CategoryController::class,"updateCategories"]);
