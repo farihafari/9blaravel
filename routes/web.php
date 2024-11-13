@@ -15,3 +15,5 @@ Route::get('categories', function () {
 Route::post("categories",[CategoryController::class,"AddCategory"]);
 Route::get("detail",[CategoryController::class,"AllCategories"]);
 Route::get("update.{id}",[CategoryController::class,"updateCategories"]);
+Route::post("edit",[CategoryController::class,"EditCategory"]);
+Route::get("delete.{id}",[CategoryController::class,"DeleteCategory"]);

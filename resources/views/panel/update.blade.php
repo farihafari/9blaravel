@@ -4,8 +4,9 @@
     <div class="row  bg-light rounded mx-0">
         <div class="col-md-12">
             <h3>update Categories</h3>
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" action="{{url('edit')}}" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" name="cid" value="{{$object['id']}}">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">name</label>
                     <input type="text" name="cname" value="{{$object['name']}}" class="form-control" id="exampleInputEmail1"

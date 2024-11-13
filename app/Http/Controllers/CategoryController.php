@@ -31,5 +31,20 @@ class CategoryController extends Controller
         // dd($object->name);
         return view("panel.update",compact("object"));
     }
-
+    function EditCategory(Request $request){
+        $object = Category::find($request->cid);
+        if(isset($request->cimage)){
+            $categoryImage = time().".".$request->cimage->extension();
+            $request->cimage->move(public_path("assets/img/categories"),$categoryImage);
+               $object->image = $categoryImage;
+        }
+        $object->name= $request->cname;
+        $object->save();
+        return redirect("detail")->with("updated","succesfully");
+    }
+function DeleteCategory($id){
+$object = Category::find($id);
+$object->delete();
+return redirect("detail")->with("deleted","succesfully");
+}
 }
